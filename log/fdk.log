@@ -787,3 +787,245 @@ Quit the server with Control-C.
 2022-01-30 12:19:11.422 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
 2022-01-30 12:19:11.422 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
 2022-01-30 12:19:13.829 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 15:12:26.332 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts"}" to all listeners.[0m
+2022-01-30 15:12:26.509 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"styles"}" to all listeners.[0m
+2022-01-30 15:12:26.511 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"styles\\images"}" to all listeners.[0m
+2022-01-30 18:19:40.903 +0530 [debug] ([34mlogger.js[0m) [31mStarting FDK in node v12.22.9 on win32[0m
+2022-01-30 18:19:45.158 +0530 [debug] ([34msequelize.js[0m) [31msetting up sqilite at "E:\Tejasri\FService\Lightstrom usecase-1/.fdk/store.sqlite"[0m
+2022-01-30 18:19:45.485 +0530 [debug] ([34mindex.js[0m) [31mRunning with args {"cmd":"run","gopts":{},"opts":{},"goptArg":{},"optArg":{},"args":[]}[0m
+2022-01-30 18:19:45.487 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"version_details":{"fdkCli":{"version":"7.3.0","dl":"https://dl.freshdev.io/cli/fdk-7.3.0.tgz","cmd":"npm install https://dl.freshdev.io/cli/fdk-7.3.0.tgz -g"},"addon":{"version":"1.9.19","dl":"https://dl.freshdev.io/cli-addon/addon-1.9.19.zip"},"forced_versions":["4.3.6"]},"last_updated":{"time_stamp":1643520097149}}[0m
+2022-01-30 18:19:45.487 +0530 [debug] ([34mupdater.js[0m) [31mlast check less than an day ago, not looking for updates[0m
+2022-01-30 18:19:46.094 +0530 [debug] ([34mmanifest.js[0m) [31mReloading manifest with {"platform-version":"2.2","product":{"freshservice":{"location":{"ticket_background":{"url":"index.html"}}}},"whitelisted-domains":["https://*.freshservice.com"],"engines":{"node":"12.22.9","fdk":"7.3.0"}}.[0m
+2022-01-30 18:19:46.095 +0530 [debug] ([34mmanifest.js[0m) [31mInferred db as features.[0m
+2022-01-30 18:19:46.102 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"version_details":{"fdkCli":{"version":"7.3.0","dl":"https://dl.freshdev.io/cli/fdk-7.3.0.tgz","cmd":"npm install https://dl.freshdev.io/cli/fdk-7.3.0.tgz -g"},"addon":{"version":"1.9.19","dl":"https://dl.freshdev.io/cli-addon/addon-1.9.19.zip"},"forced_versions":["4.3.6"]},"last_updated":{"time_stamp":1643520097149}}[0m
+2022-01-30 18:19:46.136 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"version_details":{"fdkCli":{"version":"7.3.0","dl":"https://dl.freshdev.io/cli/fdk-7.3.0.tgz","cmd":"npm install https://dl.freshdev.io/cli/fdk-7.3.0.tgz -g"},"addon":{"version":"1.9.19","dl":"https://dl.freshdev.io/cli-addon/addon-1.9.19.zip"},"forced_versions":["4.3.6"]},"last_updated":{"time_stamp":1643520097149}}[0m
+2022-01-30 18:19:49.667 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"version_details":{"fdkCli":{"version":"7.3.0","dl":"https://dl.freshdev.io/cli/fdk-7.3.0.tgz","cmd":"npm install https://dl.freshdev.io/cli/fdk-7.3.0.tgz -g"},"addon":{"version":"1.9.19","dl":"https://dl.freshdev.io/cli-addon/addon-1.9.19.zip"},"forced_versions":["4.3.6"]},"last_updated":{"time_stamp":1643520097149}}[0m
+2022-01-30 18:19:51.850 +0530 [debug] ([34mvalidate.js[0m) [31masked to skip the following validations, [0m
+2022-01-30 18:19:51.851 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator actions[0m
+2022-01-30 18:19:51.852 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator app-dir[0m
+2022-01-30 18:19:51.855 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator config-dir[0m
+2022-01-30 18:19:51.856 +0530 [debug] ([34mconfig-dir.js[0m) [31mChecking to see if E:\Tejasri\FService\Lightstrom usecase-1/config/ exists.[0m
+2022-01-30 18:19:51.857 +0530 [debug] ([34mconfig-dir.js[0m) [31mFetched the following config files iparams.json[0m
+2022-01-30 18:19:51.857 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator custom-objects[0m
+2022-01-30 18:19:51.859 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator event[0m
+2022-01-30 18:19:51.860 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator iparam[0m
+2022-01-30 18:19:51.866 +0530 [debug] ([34mvalidate.js[0m) [31mskipping validator lint[0m
+2022-01-30 18:19:51.867 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator manifest[0m
+2022-01-30 18:19:51.867 +0530 [debug] ([34mmanifest.js[0m) [31mrunning manifest validation with type run_validation[0m
+2022-01-30 18:19:51.868 +0530 [debug] ([34mvalidate.js[0m) [31mskipping validator manifest-dependency[0m
+2022-01-30 18:19:51.868 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator oauth[0m
+2022-01-30 18:19:51.868 +0530 [debug] ([34mvalidate.js[0m) [31mskipping validator pkgsize[0m
+2022-01-30 18:19:51.869 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator schema[0m
+2022-01-30 18:19:51.869 +0530 [debug] ([34mvalidate.js[0m) [31mrunning validator version-check[0m
+2022-01-30 18:19:51.875 +0530 [debug] ([34mwatcher.js[0m) [31mPreparing to watch the following files ./app,./config,./manifest.json[0m
+2022-01-30 18:19:51.886 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:19:51.886 +0530 [debug] ([34mcustom-objects.js[0m) [31mto force or not? false[0m
+2022-01-30 18:19:51.886 +0530 [debug] ([34mcustom-objects.js[0m) [31mbeginning to re-sync db[0m
+2022-01-30 18:19:54.133 +0530 [debug] ([34mindex.js[0m) [31mloading model at "C:\Users\LENOVO\AppData\Roaming\npm\node_modules\fdk\lib\models\bigint-pivot.js"[0m
+2022-01-30 18:19:54.138 +0530 [debug] ([34mindex.js[0m) [31mloading model at "C:\Users\LENOVO\AppData\Roaming\npm\node_modules\fdk\lib\models\entity-field-choice.js"[0m
+2022-01-30 18:19:54.140 +0530 [debug] ([34mindex.js[0m) [31mloading model at "C:\Users\LENOVO\AppData\Roaming\npm\node_modules\fdk\lib\models\entity-field.js"[0m
+2022-01-30 18:19:54.143 +0530 [debug] ([34mindex.js[0m) [31mloading model at "C:\Users\LENOVO\AppData\Roaming\npm\node_modules\fdk\lib\models\entity.js"[0m
+2022-01-30 18:19:54.145 +0530 [debug] ([34mindex.js[0m) [31mloading model at "C:\Users\LENOVO\AppData\Roaming\npm\node_modules\fdk\lib\models\record.js"[0m
+2022-01-30 18:19:54.148 +0530 [debug] ([34mindex.js[0m) [31mloading model at "C:\Users\LENOVO\AppData\Roaming\npm\node_modules\fdk\lib\models\string-pivot.js"[0m
+2022-01-30 18:19:54.197 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:19:54.199 +0530 [debug] ([34mcustom-objects.js[0m) [31mupdated local store with latest entity hash[0m
+2022-01-30 18:19:54.201 +0530 [info] Starting local testing server at http://*:10001/    
+Append 'dev=true' to your Freshservice account URL to start testing    
+e.g. https://domain.freshservice.com/helpdesk/tickets/1?dev=true    
+Quit the server with Control-C.
+2022-01-30 18:19:54.203 +0530 [info] To test the installation page, visit - http://localhost:10001/custom_configs
+2022-01-30 18:20:02.947 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:20:02.950 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:20:02.951 +0530 [debug] ([34miframe.js[0m) [31mResponding to product with {"configs":{"__meta":{"secure":["apikey"]},"domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","product":{"freshservice":{"location":{"ticket_background":{"url":"index.html"}}}},"features":["db"],"actions":false,"omni":false,"products":["freshservice"],"platform":"2.2","v2":[{"id":1,"version_id":1,"configs":{"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","placeholders":{"ticket_background":{"url":"http://localhost:10001/iframe/index.html"}}}]}[0m
+2022-01-30 18:20:02.960 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:20:02.961 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:20:02.962 +0530 [debug] ([34miframe.js[0m) [31mResponding to product with {"configs":{"__meta":{"secure":["apikey"]},"domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","product":{"freshservice":{"location":{"ticket_background":{"url":"index.html"}}}},"features":["db"],"actions":false,"omni":false,"products":["freshservice"],"platform":"2.2","v2":[{"id":1,"version_id":1,"configs":{"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","placeholders":{"ticket_background":{"url":"http://localhost:10001/iframe/index.html"}}}]}[0m
+2022-01-30 18:20:03.669 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:20:03.672 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"index.html"}" to all listeners.[0m
+2022-01-30 18:20:03.903 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
+2022-01-30 18:20:03.905 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
+2022-01-30 18:20:07.674 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:20:10.250 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:20:10.252 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:20:10.253 +0530 [debug] ([34miframe.js[0m) [31mResponding to product with {"configs":{"__meta":{"secure":["apikey"]},"domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","product":{"freshservice":{"location":{"ticket_background":{"url":"index.html"}}}},"features":["db"],"actions":false,"omni":false,"products":["freshservice"],"platform":"2.2","v2":[{"id":1,"version_id":1,"configs":{"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","placeholders":{"ticket_background":{"url":"http://localhost:10001/iframe/index.html"}}}]}[0m
+2022-01-30 18:20:11.666 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:22:08.185 +0530 [debug] ([34mdata-pipe.js[0m) [31mreceived call for route "proxy" with action "execute" and body {"action":"execute","data":{"headers":{"Authorization":"Basic <%= encode(iparam.apikey) %>"},"url":"https://<%= iparam.domain %>/api/v2/tickets/1536?include=related_tickets","method":"get"}}[0m
+2022-01-30 18:22:08.188 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:22:08.199 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:22:08.199 +0530 [debug] ([34mproxy.js[0m) [31mSubstituing Templates {"headers":{"Authorization":"Basic <%= encode(iparam.apikey) %>"},"url":"https://<%= iparam.domain %>/api/v2/tickets/1536?include=related_tickets","method":"get"} with {"iparam":{"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"},"oauth_iparams":{}}[0m
+2022-01-30 18:22:08.204 +0530 [debug] ([34mproxy.js[0m) [31mParsed https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets as {"protocol":"https:","slashes":true,"auth":null,"host":"artisinc.freshservice.com","port":null,"hostname":"artisinc.freshservice.com","hash":null,"search":"?include=related_tickets","query":"include=related_tickets","pathname":"/api/v2/tickets/1536","path":"/api/v2/tickets/1536?include=related_tickets","href":"https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets"}[0m
+2022-01-30 18:22:08.210 +0530 [debug] ([34mproxy.js[0m) [31mChecking if the request url is whitelisted in manifest[0m
+2022-01-30 18:22:08.210 +0530 [debug] ([34mproxy.js[0m) [31mMatched "https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets" with https://[a-z0-9-]*.freshservice.com[0m
+2022-01-30 18:22:08.211 +0530 [debug] ([34mproxy.js[0m) [31mMaking proxy call with options as {"headers":{"Authorization":"Basic S2dKY3NkcmowbWlRWnVRRW5Xbw=="},"url":"https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets","method":"get","whitelistedDomains":["https://*.freshservice.com"],"maxAttempts":1,"retryDelay":0,"timeout":5000}[0m
+2022-01-30 18:22:09.264 +0530 [debug] ([34mproxy.js[0m) [31mProxy came back with error as null, body as "{\"ticket\":{\"cc_emails\":[],\"fwd_emails\":[],\"reply_cc_emails\":[],\"bcc_emails\":null,\"fr_esc[0m
+2022-01-30 18:22:09.265 +0530 [debug] ([34mproxy.js[0m) [31mLooking for "application/json" in application/json,application/xml,text/html,text/xml,application/jsonp,text/plain,application/javascript,application/vnd.api+json[0m
+2022-01-30 18:22:09.641 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:23:06.559 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:23:06.560 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:23:06.562 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:23:06.596 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:23:06.688 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
+2022-01-30 18:23:06.689 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
+2022-01-30 18:23:09.579 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:23:13.484 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:23:13.486 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:23:13.487 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:23:13.497 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:23:13.502 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:23:13.602 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
+2022-01-30 18:23:13.603 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
+2022-01-30 18:23:15.794 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:23:27.026 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:23:27.028 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:23:27.029 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:23:27.038 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:23:27.043 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:23:27.108 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
+2022-01-30 18:23:27.109 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
+2022-01-30 18:23:29.322 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:23:31.623 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:24:07.705 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"index.html"}" to all listeners.[0m
+2022-01-30 18:24:07.716 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:24:07.748 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"index.html"}" to all listeners.[0m
+2022-01-30 18:24:07.757 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:24:07.827 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
+2022-01-30 18:24:07.828 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
+2022-01-30 18:24:10.196 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:24:21.116 +0530 [debug] ([34mdata-pipe.js[0m) [31mreceived call for route "proxy" with action "execute" and body {"action":"execute","data":{"headers":{"Authorization":"Basic <%= encode(iparam.apikey) %>"},"url":"https://<%= iparam.domain %>/api/v2/tickets/1536?include=related_tickets","method":"get"}}[0m
+2022-01-30 18:24:21.117 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:24:21.118 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:24:21.119 +0530 [debug] ([34mproxy.js[0m) [31mSubstituing Templates {"headers":{"Authorization":"Basic <%= encode(iparam.apikey) %>"},"url":"https://<%= iparam.domain %>/api/v2/tickets/1536?include=related_tickets","method":"get"} with {"iparam":{"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"},"oauth_iparams":{}}[0m
+2022-01-30 18:24:21.120 +0530 [debug] ([34mproxy.js[0m) [31mParsed https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets as {"protocol":"https:","slashes":true,"auth":null,"host":"artisinc.freshservice.com","port":null,"hostname":"artisinc.freshservice.com","hash":null,"search":"?include=related_tickets","query":"include=related_tickets","pathname":"/api/v2/tickets/1536","path":"/api/v2/tickets/1536?include=related_tickets","href":"https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets"}[0m
+2022-01-30 18:24:21.120 +0530 [debug] ([34mproxy.js[0m) [31mChecking if the request url is whitelisted in manifest[0m
+2022-01-30 18:24:21.121 +0530 [debug] ([34mproxy.js[0m) [31mMatched "https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets" with https://[a-z0-9-]*.freshservice.com[0m
+2022-01-30 18:24:21.121 +0530 [debug] ([34mproxy.js[0m) [31mMaking proxy call with options as {"headers":{"Authorization":"Basic S2dKY3NkcmowbWlRWnVRRW5Xbw=="},"url":"https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets","method":"get","whitelistedDomains":["https://*.freshservice.com"],"maxAttempts":1,"retryDelay":0,"timeout":5000}[0m
+2022-01-30 18:24:22.112 +0530 [debug] ([34mproxy.js[0m) [31mProxy came back with error as null, body as "{\"ticket\":{\"cc_emails\":[],\"fwd_emails\":[],\"reply_cc_emails\":[],\"bcc_emails\":null,\"fr_esc[0m
+2022-01-30 18:24:22.112 +0530 [debug] ([34mproxy.js[0m) [31mLooking for "application/json" in application/json,application/xml,text/html,text/xml,application/jsonp,text/plain,application/javascript,application/vnd.api+json[0m
+2022-01-30 18:24:22.196 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:25:03.682 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:03.684 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:03.685 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:03.706 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:25:03.902 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
+2022-01-30 18:25:03.903 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
+2022-01-30 18:25:06.227 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:06.229 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:06.230 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:06.238 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:25:06.241 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:25:06.244 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:25:06.387 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
+2022-01-30 18:25:06.388 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
+2022-01-30 18:25:08.552 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:25:08.805 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:08.806 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:08.814 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:25:08.816 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:25:08.830 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:08.858 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
+2022-01-30 18:25:08.859 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
+2022-01-30 18:25:11.553 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:25:14.179 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:14.180 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:14.182 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:25:14.188 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:25:14.195 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:25:14.198 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:25:14.277 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
+2022-01-30 18:25:14.277 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
+2022-01-30 18:25:16.490 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:40:09.899 +0530 [debug] ([34mdata-pipe.js[0m) [31mreceived call for route "proxy" with action "execute" and body {"action":"execute","data":{"headers":{"Authorization":"Basic <%= encode(iparam.apikey) %>"},"url":"https://<%= iparam.domain %>/api/v2/tickets/1536?include=related_tickets","method":"get"}}[0m
+2022-01-30 18:40:09.901 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:40:09.902 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 18:40:09.902 +0530 [debug] ([34mproxy.js[0m) [31mSubstituing Templates {"headers":{"Authorization":"Basic <%= encode(iparam.apikey) %>"},"url":"https://<%= iparam.domain %>/api/v2/tickets/1536?include=related_tickets","method":"get"} with {"iparam":{"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"},"oauth_iparams":{}}[0m
+2022-01-30 18:40:09.904 +0530 [debug] ([34mproxy.js[0m) [31mParsed https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets as {"protocol":"https:","slashes":true,"auth":null,"host":"artisinc.freshservice.com","port":null,"hostname":"artisinc.freshservice.com","hash":null,"search":"?include=related_tickets","query":"include=related_tickets","pathname":"/api/v2/tickets/1536","path":"/api/v2/tickets/1536?include=related_tickets","href":"https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets"}[0m
+2022-01-30 18:40:09.908 +0530 [debug] ([34mproxy.js[0m) [31mChecking if the request url is whitelisted in manifest[0m
+2022-01-30 18:40:09.909 +0530 [debug] ([34mproxy.js[0m) [31mMatched "https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets" with https://[a-z0-9-]*.freshservice.com[0m
+2022-01-30 18:40:09.909 +0530 [debug] ([34mproxy.js[0m) [31mMaking proxy call with options as {"headers":{"Authorization":"Basic S2dKY3NkcmowbWlRWnVRRW5Xbw=="},"url":"https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets","method":"get","whitelistedDomains":["https://*.freshservice.com"],"maxAttempts":1,"retryDelay":0,"timeout":5000}[0m
+2022-01-30 18:40:10.482 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:40:10.918 +0530 [debug] ([34mproxy.js[0m) [31mProxy came back with error as null, body as "{\"ticket\":{\"cc_emails\":[],\"fwd_emails\":[],\"reply_cc_emails\":[],\"bcc_emails\":null,\"fr_esc[0m
+2022-01-30 18:40:10.918 +0530 [debug] ([34mproxy.js[0m) [31mLooking for "application/json" in application/json,application/xml,text/html,text/xml,application/jsonp,text/plain,application/javascript,application/vnd.api+json[0m
+2022-01-30 18:40:12.479 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:44:53.343 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts"}" to all listeners.[0m
+2022-01-30 18:44:53.361 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 18:44:53.393 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"styles"}" to all listeners.[0m
+2022-01-30 18:44:53.394 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"styles\\images"}" to all listeners.[0m
+2022-01-30 18:44:53.482 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
+2022-01-30 18:44:53.483 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
+2022-01-30 18:44:56.561 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 18:49:25.722 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:49:25.724 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:49:25.742 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:49:34.917 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:49:34.918 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:49:34.920 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:49:46.669 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:49:46.670 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:49:46.671 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:03.804 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:03.805 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:03.806 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:17.549 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:17.551 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:17.552 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:26.468 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:26.471 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:26.472 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:35.445 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:35.447 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:50:35.448 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:52:33.906 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:52:33.907 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:52:33.908 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:53:36.281 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:53:36.282 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:53:36.283 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:54:02.244 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:54:02.245 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:54:02.246 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:54:29.328 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:54:29.329 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:54:29.330 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:54:46.180 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:54:46.181 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:54:46.182 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:10.642 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:10.643 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:10.644 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:13.635 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:13.637 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:13.639 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:40.433 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:40.434 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:40.468 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:49.725 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:49.726 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:55:49.727 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:56:59.175 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:56:59.176 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 18:56:59.177 +0530 [debug] ([34mwatcher.js[0m) [31mBroadcasted "{"file":"scripts\\app.js"}" to all listeners.[0m
+2022-01-30 19:00:16.441 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 19:00:16.442 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 19:00:16.443 +0530 [debug] ([34miframe.js[0m) [31mResponding to product with {"configs":{"__meta":{"secure":["apikey"]},"domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","product":{"freshservice":{"location":{"ticket_background":{"url":"index.html"}}}},"features":["db"],"actions":false,"omni":false,"products":["freshservice"],"platform":"2.2","v2":[{"id":1,"version_id":1,"configs":{"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","placeholders":{"ticket_background":{"url":"http://localhost:10001/iframe/index.html"}}}]}[0m
+2022-01-30 19:00:16.535 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 19:00:16.536 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 19:00:16.536 +0530 [debug] ([34miframe.js[0m) [31mResponding to product with {"configs":{"__meta":{"secure":["apikey"]},"domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","product":{"freshservice":{"location":{"ticket_background":{"url":"index.html"}}}},"features":["db"],"actions":false,"omni":false,"products":["freshservice"],"platform":"2.2","v2":[{"id":1,"version_id":1,"configs":{"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","placeholders":{"ticket_background":{"url":"http://localhost:10001/iframe/index.html"}}}]}[0m
+2022-01-30 19:00:22.557 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /index.html[0m
+2022-01-30 19:00:22.963 +0530 [debug] ([34miframe.js[0m) [31mResponding with contents of /scripts/app.js[0m
+2022-01-30 19:00:22.964 +0530 [debug] ([34mcoverage-util.js[0m) [31mInstrumenting E:\Tejasri\FService\Lightstrom usecase-1\app\scripts\app.js[0m
+2022-01-30 19:00:23.393 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 19:00:23.394 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 19:00:23.395 +0530 [debug] ([34miframe.js[0m) [31mResponding to product with {"configs":{"__meta":{"secure":["apikey"]},"domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","product":{"freshservice":{"location":{"ticket_background":{"url":"index.html"}}}},"features":["db"],"actions":false,"omni":false,"products":["freshservice"],"platform":"2.2","v2":[{"id":1,"version_id":1,"configs":{"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"},"displayName":"Lightstrom usecase-1","placeholders":{"ticket_background":{"url":"http://localhost:10001/iframe/index.html"}}}]}[0m
+2022-01-30 19:00:25.636 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 19:00:27.319 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
+2022-01-30 19:07:39.609 +0530 [debug] ([34mdata-pipe.js[0m) [31mreceived call for route "proxy" with action "execute" and body {"action":"execute","data":{"headers":{"Authorization":"Basic <%= encode(iparam.apikey) %>"},"url":"https://<%= iparam.domain %>/api/v2/tickets/1536?include=related_tickets","method":"get"}}[0m
+2022-01-30 19:07:39.611 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 19:07:39.612 +0530 [debug] ([34mdata-util.js[0m) [31mRead {"lights_101_101_freshservice":{"lights_101_101_custom_iparams":{"__meta":{"secure":["apikey"]},"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"}}}[0m
+2022-01-30 19:07:39.612 +0530 [debug] ([34mproxy.js[0m) [31mSubstituing Templates {"headers":{"Authorization":"Basic <%= encode(iparam.apikey) %>"},"url":"https://<%= iparam.domain %>/api/v2/tickets/1536?include=related_tickets","method":"get"} with {"iparam":{"apikey":"KgJcsdrj0miQZuQEnWo","domain":"artisinc.freshservice.com"},"oauth_iparams":{}}[0m
+2022-01-30 19:07:39.614 +0530 [debug] ([34mproxy.js[0m) [31mParsed https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets as {"protocol":"https:","slashes":true,"auth":null,"host":"artisinc.freshservice.com","port":null,"hostname":"artisinc.freshservice.com","hash":null,"search":"?include=related_tickets","query":"include=related_tickets","pathname":"/api/v2/tickets/1536","path":"/api/v2/tickets/1536?include=related_tickets","href":"https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets"}[0m
+2022-01-30 19:07:39.615 +0530 [debug] ([34mproxy.js[0m) [31mChecking if the request url is whitelisted in manifest[0m
+2022-01-30 19:07:39.616 +0530 [debug] ([34mproxy.js[0m) [31mMatched "https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets" with https://[a-z0-9-]*.freshservice.com[0m
+2022-01-30 19:07:39.616 +0530 [debug] ([34mproxy.js[0m) [31mMaking proxy call with options as {"headers":{"Authorization":"Basic S2dKY3NkcmowbWlRWnVRRW5Xbw=="},"url":"https://artisinc.freshservice.com/api/v2/tickets/1536?include=related_tickets","method":"get","whitelistedDomains":["https://*.freshservice.com"],"maxAttempts":1,"retryDelay":0,"timeout":5000}[0m
+2022-01-30 19:07:40.534 +0530 [debug] ([34mproxy.js[0m) [31mProxy came back with error as null, body as "{\"ticket\":{\"cc_emails\":[],\"fwd_emails\":[],\"reply_cc_emails\":[],\"bcc_emails\":null,\"fr_esc[0m
+2022-01-30 19:07:40.534 +0530 [debug] ([34mproxy.js[0m) [31mLooking for "application/json" in application/json,application/xml,text/html,text/xml,application/jsonp,text/plain,application/javascript,application/vnd.api+json[0m
+2022-01-30 19:07:41.249 +0530 [debug] ([34mcoverage-util.js[0m) [31mWriting coverage.[0m
