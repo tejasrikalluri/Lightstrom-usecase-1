@@ -3,14 +3,15 @@
   "product": {
     "freshservice": {
       "location": {
-        "ticket_sidebar": {
-          "url": "index.html",
-          "icon": "styles/images/icon.svg"
+        "ticket_background": {
+          "url": "index.html"
         }
       }
     }
   },
-  "whitelisted-domains": [],
+  "whitelisted-domains": [
+    "https://*.freshservice.com"
+  ],
   "engines": {
     "node": "12.22.9",
     "fdk": "7.3.0"

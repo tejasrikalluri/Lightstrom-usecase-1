@@ -1,1 +1,15 @@
-{}
+{
+    "apikey": {
+        "display_name": "API key",
+        "description": "Please enter your account’s API key",
+        "type": "text",
+        "required": true,
+        "secure": true
+    },
+    "domain": {
+        "display_name": "Domain",
+        "description": "Please enter your account’s Domain",
+        "type": "text",
+        "required": true
+    }
+}

@@ -1,6 +1,7 @@
-## Your First App
+## Lightstorm Use Case 1
 
-This app displays the name of the requester of a Freshservice ticket in the ticket_sidebar placeholder
+• When an Agent updates a parent Incident ticket property and clicks the ‘Update’ button, custom app will identify the ticket property field(s) updated in the parent ticket and update these property fields in associated child ticket(s).
+• When an Agent updates a child ticket property and clicks the ‘Update’ button, custom app will identify the ticket property fields updated in the child ticket and update these property fields in the parent ticket.
 
 ### Files and Folders
     .
