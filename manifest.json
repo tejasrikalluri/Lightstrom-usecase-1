@@ -1,0 +1,18 @@
+{
+  "platform-version": "2.2",
+  "product": {
+    "freshservice": {
+      "location": {
+        "ticket_sidebar": {
+          "url": "index.html",
+          "icon": "styles/images/icon.svg"
+        }
+      }
+    }
+  },
+  "whitelisted-domains": [],
+  "engines": {
+    "node": "12.22.9",
+    "fdk": "7.3.0"
+  }
+}
