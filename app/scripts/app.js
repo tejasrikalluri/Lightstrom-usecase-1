@@ -55,7 +55,9 @@ function viewRelatedTickets(display_id, event_data) {
   }
 }
 function formUpdateBody(ticketIds, updatedObject) {
-  var body = {};
+  var body = {
+    "custom_fields": {}
+  };
   $.each(updatedObject, function (key, value) {
     console.log(key)
     console.log(value)
@@ -77,20 +79,40 @@ function formUpdateBody(ticketIds, updatedObject) {
       body["department_id"] = value.value;
     else if (key === "source")
       body["source"] = value.value;
+    else if (key === "sub_category")
+      body["sub_category"] = value.value;
+    else if (key === "item_category")
+      body["item_category"] = value.value;
+    else if (key === "ticket_type")
+      body["ticket_type"] = value.value;
+    else if (key === "tags")
+      body["tags"] = value.value;
     else {
-      body['custom_fields'][key] = value.value
+      body.custom_fields[key] = value.value;
     }
   });
   console.log(body)
   if ($.isArray(ticketIds)) {
     var count = 0;
-    process(count);
+    if (count < len) {
+      process(count, ticketIds.length, ticketIds, body, "loop");
+    }
   } else {
-
+    process(count, ticketIds.length, ticketIds, body, null);
   }
-}
-function process(count) {
-
+  function process(count, len, arr, body, origin) {
+    var headers = { "Authorization": "Basic <%= encode(iparam.api_key) %>" };
+    var options = { headers: headers, body: JSON.stringify(body) };
+    var url = `https://<%= iparam.domain %>/api/v2/tickets/${arr[count]}`;
+    client.request.put(url, options).then(function () {
+      console.log(`Updated successfully ticket id- ${arr[count]}`);
+      if (origin !== null)
+        process(count + 1, len, arr, origin);
+    }, function (error) {
+      console.log("in update block");
+      console.error(error);
+    });
+  }
 }
 
 function ticketErrorBlock(error) {
