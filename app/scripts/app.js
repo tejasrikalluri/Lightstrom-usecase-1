@@ -18,13 +18,16 @@ function renderTicketPage() {
   client.data
     .get('ticket')
     .then(function (payload) {
-      console.log(payload.ticket.display_id)
-      var propertyChangeCallback = function (event) {
-        console.log("**************************")
-        var event_data = event.helper.getData();
-        console.log(event_data)
-        viewRelatedTickets(payload.ticket.display_id, event_data);
-      };
+      console.log(payload.ticket)
+      if (payload.ticket.ticket_type === "Incident") {
+        var propertyChangeCallback = function (event) {
+          console.log("**************************")
+          var event_data = event.helper.getData();
+          console.log(event_data)
+          viewRelatedTickets(payload.ticket.display_id, event_data);
+        };
+      }
+
       client.events.on("ticket.propertiesUpdated", propertyChangeCallback);
     })
     .catch(handleErr);
@@ -62,15 +65,15 @@ function formUpdateBody(ticketIds, updatedObject) {
     console.log(key)
     console.log(value)
     if (key === "status")
-      body["status"] = value.value;
+      body["status"] = parseInt(value.value);
     else if (key === "priority")
-      body["priority"] = value.value;
+      body["priority"] = parseInt(value.value);
     else if (key === "urgency")
-      body["urgency"] = value.value;
+      body["urgency"] = parseInt(value.value);
     else if (key === "group_id")
       body["group_id"] = value.value;
     else if (key === "impact")
-      body["impact"] = value.value;
+      body["impact"] = parseInt(value.value);
     else if (key === "responder_id")
       body["responder_id"] = value.value;
     else if (key === "category")
@@ -78,7 +81,7 @@ function formUpdateBody(ticketIds, updatedObject) {
     else if (key === "department_id")
       body["department_id"] = value.value;
     else if (key === "source")
-      body["source"] = value.value;
+      body["source"] = parseInt(value.value);
     else if (key === "sub_category")
       body["sub_category"] = value.value;
     else if (key === "item_category")
@@ -94,27 +97,29 @@ function formUpdateBody(ticketIds, updatedObject) {
   console.log(body)
   if ($.isArray(ticketIds)) {
     var count = 0;
-    if (count < len) {
-      process(count, ticketIds.length, ticketIds, body, "loop");
-    }
+    iterate(count, ticketIds, body);
   } else {
-    process(count, ticketIds.length, ticketIds, body, null);
-  }
-  function process(count, len, arr, body, origin) {
-    var headers = { "Authorization": "Basic <%= encode(iparam.api_key) %>" };
-    var options = { headers: headers, body: JSON.stringify(body) };
-    var url = `https://<%= iparam.domain %>/api/v2/tickets/${arr[count]}`;
-    client.request.put(url, options).then(function () {
-      console.log(`Updated successfully ticket id- ${arr[count]}`);
-      if (origin !== null)
-        process(count + 1, len, arr, origin);
-    }, function (error) {
-      console.log("in update block");
-      console.error(error);
-    });
+    iterate(count, ticketIds.length, ticketIds, body, null);
   }
 }
-
+function process(count, arr, body, origin) {
+  var headers = { "Authorization": "Basic <%= encode(iparam.apikey) %>", "Content-Type": "application/json" };
+  var options = { headers: headers, body: JSON.stringify(body) };
+  var url = `https://<%= iparam.domain %>/api/v2/tickets/${arr[count]}`;
+  client.request.put(url, options).then(function () {
+    console.log(`Updated successfully ticket id- ${arr[count]}`);
+    if (origin !== null)
+      iterate(count + 1, arr, body);
+  }, function (error) {
+    console.log("in update block");
+    console.error(error);
+  });
+}
+function iterate(count, ticketIds, body) {
+  if (count < ticketIds.length) {
+    process(count, ticketIds, body, "loop");
+  }
+}
 function ticketErrorBlock(error) {
   console.error(error)
 }
