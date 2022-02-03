@@ -71,15 +71,15 @@ function formUpdateBody(ticketIds, updatedObject) {
     else if (key === "urgency")
       body["urgency"] = parseInt(value.value);
     else if (key === "group_id")
-      body["group_id"] = value.value;
+      body["group_id"] = parseInt(value.value);
     else if (key === "impact")
       body["impact"] = parseInt(value.value);
     else if (key === "responder_id")
-      body["responder_id"] = value.value;
+      body["responder_id"] = parseInt(value.value);
     else if (key === "category")
       body["category"] = value.value;
     else if (key === "department_id")
-      body["department_id"] = value.value;
+      body["department_id"] = parseInt(value.value);
     else if (key === "source")
       body["source"] = parseInt(value.value);
     else if (key === "sub_category")
@@ -89,7 +89,7 @@ function formUpdateBody(ticketIds, updatedObject) {
     else if (key === "ticket_type")
       body["ticket_type"] = value.value;
     else if (key === "tags")
-      body["tags"] = value.value;
+      body["tags"] = value.value.split(",");
     else {
       body.custom_fields[key] = value.value;
     }
