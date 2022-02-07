@@ -87,11 +87,12 @@ function formUpdateBody(ticketIds, updatedObject, map, dropdownMap) {
     }
   });
   console.log(body)
-  if ($.isArray(ticketIds)) {
+  console.log($.isArray(ticketIds))
+  if (ticketIds.length > 0) {
     var count = 0;
-    iterate(count, ticketIds, body);
+    iterate(count, ticketIds, body, "parent");
   } else {
-    iterate(count, ticketIds.length, ticketIds, body, null);
+    iterate(count, ticketIds, body, "child");
   }
 }
 function formCustomMultiSelectBody(map, key, dropdownMap, value) {
@@ -115,8 +116,8 @@ function process(count, arr, body, origin) {
   var url = `https://<%= iparam.domain %>/api/v2/tickets/${arr[count]}`;
   client.request.put(url, options).then(function () {
     console.log(`Updated successfully ticket id- ${arr[count]}`);
-    if (origin !== null)
-      iterate(count + 1, arr, body);
+    if (origin !== "child")
+      iterate(count + 1, arr, body, origin);
   }, function (error) {
     console.log("in update block");
     console.error(error);
@@ -147,10 +148,16 @@ function mapTicketFieldsTypes(display_id, event_data) {
     console.error(error);
   });
 }
-function iterate(count, ticketIds, body) {
-  if (count < ticketIds.length) {
-    process(count, ticketIds, body, "loop");
+function iterate(count, ticketIds, body, origin) {
+  console.log(origin)
+  if (origin === 'child') {
+    process(count, ticketIds, body, origin);
+  } else {
+    if (count < ticketIds.length) {
+      process(count, ticketIds, body, origin);
+    }
   }
+
 }
 function ticketErrorBlock(error) {
   console.error(error)
