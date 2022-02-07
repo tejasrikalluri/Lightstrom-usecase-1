@@ -15,24 +15,18 @@ document.onreadystatechange = function () {
 
 function renderTicketPage() {
   console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIII")
-  client.data
-    .get('ticket')
-    .then(function (payload) {
-      console.log(payload.ticket)
-      if (payload.ticket.ticket_type === "Incident") {
-        var propertyChangeCallback = function (event) {
-          console.log("**************************")
-          var event_data = event.helper.getData();
-          console.log(event_data)
-          viewRelatedTickets(payload.ticket.display_id, event_data);
-        };
-      }
-
-      client.events.on("ticket.propertiesUpdated", propertyChangeCallback);
-    })
-    .catch(handleErr);
+  client.data.get('ticket').then(function (payload) {
+    if (payload.ticket.ticket_type === "Incident") {
+      var propertyChangeCallback = function (event) {
+        var event_data = event.helper.getData();
+        console.log(event_data)
+        mapTicketFieldsTypes(payload.ticket.display_id, event_data);
+      };
+    }
+    client.events.on("ticket.propertiesUpdated", propertyChangeCallback);
+  }).catch(handleErr);
 }
-function viewRelatedTickets(display_id, event_data) {
+function viewRelatedTickets(display_id, event_data, map, dropdownMap) {
   var headers = { "Authorization": "Basic <%= encode(iparam.apikey) %>" };
   var options = { headers: headers };
   var url = `https://<%= iparam.domain %>/api/v2/tickets/${display_id}?include=related_tickets`;
@@ -40,14 +34,13 @@ function viewRelatedTickets(display_id, event_data) {
   function ticketSuccessBlock(data) {
     try {
       var resp = JSON.parse(data.response);
-      console.log(resp)
       if (!$.isEmptyObject(resp.ticket.related_tickets)) {
         if ("child_ids" in resp.ticket.related_tickets) {
           console.log("its a parent ticket")
-          formUpdateBody(resp.ticket.related_tickets.child_ids, event_data);
+          formUpdateBody(resp.ticket.related_tickets.child_ids, event_data, map, dropdownMap);
         } else {
           console.log("its a child ticket")
-          formUpdateBody(resp.ticket.related_tickets.parent_id, event_data);
+          formUpdateBody(resp.ticket.related_tickets.parent_id, event_data, map, dropdownMap);
         }
       } else {
         console.log("its a normal ticket")
@@ -57,13 +50,11 @@ function viewRelatedTickets(display_id, event_data) {
     }
   }
 }
-function formUpdateBody(ticketIds, updatedObject) {
+function formUpdateBody(ticketIds, updatedObject, map, dropdownMap) {
   var body = {
     "custom_fields": {}
   };
   $.each(updatedObject, function (key, value) {
-    console.log(key)
-    console.log(value)
     if (key === "status")
       body["status"] = parseInt(value.value);
     else if (key === "priority")
@@ -87,11 +78,12 @@ function formUpdateBody(ticketIds, updatedObject) {
     else if (key === "item_category")
       body["item_category"] = value.value;
     else if (key === "ticket_type")
-      body["ticket_type"] = value.value;
+      body["type"] = value.value;
     else if (key === "tags")
       body["tags"] = value.value.split(",");
     else {
-      body.custom_fields[key] = value.value;
+      body.custom_fields[key] = (map[key] === "custom_number") ? parseInt(value.value) :
+        formCustomMultiSelectBody(map, key, dropdownMap, value);
     }
   });
   console.log(body)
@@ -100,6 +92,21 @@ function formUpdateBody(ticketIds, updatedObject) {
     iterate(count, ticketIds, body);
   } else {
     iterate(count, ticketIds.length, ticketIds, body, null);
+  }
+}
+function formCustomMultiSelectBody(map, key, dropdownMap, value) {
+  var arr = [];
+  if (map[key] === "custom_multi_select_dropdown") {
+    $.each(value.value, function (k, v) {
+      Object.keys(dropdownMap).forEach(key1 => {
+        if (key1 == v) {
+          arr.push(dropdownMap[v]);
+        }
+      });
+    });
+    return arr;
+  } else {
+    return value.value;
   }
 }
 function process(count, arr, body, origin) {
@@ -112,6 +119,31 @@ function process(count, arr, body, origin) {
       iterate(count + 1, arr, body);
   }, function (error) {
     console.log("in update block");
+    console.error(error);
+  });
+}
+function mapTicketFieldsTypes(display_id, event_data) {
+  var headers = { "Authorization": "Basic <%= encode(iparam.apikey) %>" }, options = { headers: headers },
+    url = `https://<%= iparam.domain %>/api/v2/ticket_form_fields`, map = new Map(), dropdownMap = {};
+  client.request.get(url, options).then(function (data) {
+    try {
+      var resp = JSON.parse(data.response);
+      $.each(resp.ticket_fields, function (k, v) {
+        if (!v.field_type.includes("default")) {
+          map[v.name] = v.field_type;
+        } if (v.field_type === "custom_multi_select_dropdown") {
+          $.each(v.choices, function (k1, v1) {
+            dropdownMap[v1.id] = v1.value;
+          });
+        }
+      });
+      viewRelatedTickets(display_id, event_data, map, dropdownMap);
+    } catch (er) {
+      console.log("in ticket fieldscatch block");
+      console.error(er)
+    }
+  }, function (error) {
+    console.log("in ticket fields block");
     console.error(error);
   });
 }
