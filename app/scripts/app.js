@@ -14,7 +14,6 @@ document.onreadystatechange = function () {
 };
 
 function renderTicketPage() {
-  console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIII")
   client.data.get('ticket').then(function (payload) {
     if (payload.ticket.ticket_type === "Incident") {
       var propertyChangeCallback = function (event) {
@@ -36,10 +35,10 @@ function viewRelatedTickets(display_id, event_data, map, dropdownMap) {
       var resp = JSON.parse(data.response);
       if (!$.isEmptyObject(resp.ticket.related_tickets)) {
         if ("child_ids" in resp.ticket.related_tickets) {
-          console.log("its a parent ticket")
           formUpdateBody(resp.ticket.related_tickets.child_ids, event_data, map, dropdownMap);
         } else {
-          console.log("its a child ticket")
+          console.log(resp.ticket.related_tickets)
+          console.log(resp.ticket.related_tickets.parent_id)
           formUpdateBody(resp.ticket.related_tickets.parent_id, event_data, map, dropdownMap);
         }
       } else {
@@ -86,8 +85,6 @@ function formUpdateBody(ticketIds, updatedObject, map, dropdownMap) {
         formCustomMultiSelectBody(map, key, dropdownMap, value);
     }
   });
-  console.log(body)
-  console.log($.isArray(ticketIds))
   if (ticketIds.length > 0) {
     var count = 0;
     iterate(count, ticketIds, body, "parent");
@@ -113,9 +110,11 @@ function formCustomMultiSelectBody(map, key, dropdownMap, value) {
 function process(count, arr, body, origin) {
   var headers = { "Authorization": "Basic <%= encode(iparam.apikey) %>", "Content-Type": "application/json" };
   var options = { headers: headers, body: JSON.stringify(body) };
-  var url = `https://<%= iparam.domain %>/api/v2/tickets/${arr[count]}`;
+  var url = (origin === 'child ') ? `https://<%= iparam.domain %>/api/v2/tickets/${arr[count]}` :
+    `https://<%= iparam.domain %>/api/v2/tickets/${arr}`;
   client.request.put(url, options).then(function () {
-    console.log(`Updated successfully ticket id- ${arr[count]}`);
+    (origin === 'child ') ? console.log(`Updated successfully ticket id- ${arr} `) :
+      console.log(`Updated successfully ticket id- ${arr[count]} `);
     if (origin !== "child")
       iterate(count + 1, arr, body, origin);
   }, function (error) {
@@ -149,12 +148,13 @@ function mapTicketFieldsTypes(display_id, event_data) {
   });
 }
 function iterate(count, ticketIds, body, origin) {
-  console.log(origin)
   if (origin === 'child') {
     process(count, ticketIds, body, origin);
   } else {
     if (count < ticketIds.length) {
       process(count, ticketIds, body, origin);
+    } else {
+      console.log("ticket(s) updated successfully")
     }
   }
 
