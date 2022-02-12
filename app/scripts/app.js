@@ -19,13 +19,13 @@ function renderTicketPage() {
       var propertyChangeCallback = function (event) {
         var event_data = event.helper.getData();
         console.log(event_data)
-        mapTicketFieldsTypes(payload.ticket.display_id, event_data);
+        mapTicketFieldsTypes(payload.ticket.display_id, event_data, payload.ticket.priority);
       };
     }
     client.events.on("ticket.propertiesUpdated", propertyChangeCallback);
   }).catch(handleErr);
 }
-function viewRelatedTickets(display_id, event_data, map, dropdownMap) {
+function viewRelatedTickets(display_id, event_data, map, dropdownMap, priority) {
   var headers = { "Authorization": "Basic <%= encode(iparam.apikey) %>" };
   var options = { headers: headers };
   var url = `https://<%= iparam.domain %>/api/v2/tickets/${display_id}?include=related_tickets`;
@@ -35,11 +35,9 @@ function viewRelatedTickets(display_id, event_data, map, dropdownMap) {
       var resp = JSON.parse(data.response);
       if (!$.isEmptyObject(resp.ticket.related_tickets)) {
         if ("child_ids" in resp.ticket.related_tickets) {
-          formUpdateBody(resp.ticket.related_tickets.child_ids, event_data, map, dropdownMap);
+          formUpdateBody(resp.ticket.related_tickets.child_ids, event_data, map, dropdownMap, priority);
         } else {
-          console.log(resp.ticket.related_tickets)
-          console.log(resp.ticket.related_tickets.parent_id)
-          formUpdateBody(resp.ticket.related_tickets.parent_id, event_data, map, dropdownMap);
+          formUpdateBody(resp.ticket.related_tickets.parent_id, event_data, map, dropdownMap, priority);
         }
       } else {
         console.log("its a normal ticket")
@@ -49,14 +47,14 @@ function viewRelatedTickets(display_id, event_data, map, dropdownMap) {
     }
   }
 }
-function formUpdateBody(ticketIds, updatedObject, map, dropdownMap) {
+function formUpdateBody(ticketIds, updatedObject, map, dropdownMap, priority) {
   var body = {
-    "custom_fields": {}
   };
+  body['custom_fields'] = {}
   $.each(updatedObject, function (key, value) {
     if (key === "status")
       body["status"] = parseInt(value.value);
-    else if (key === "priority")
+    else if (key === "priority" && priority != value.value)
       body["priority"] = parseInt(value.value);
     else if (key === "urgency")
       body["urgency"] = parseInt(value.value);
@@ -64,8 +62,9 @@ function formUpdateBody(ticketIds, updatedObject, map, dropdownMap) {
       body["group_id"] = parseInt(value.value);
     else if (key === "impact")
       body["impact"] = parseInt(value.value);
-    else if (key === "responder_id")
+    else if (key === "responder_id" && value.value !== '') {
       body["responder_id"] = parseInt(value.value);
+    }
     else if (key === "category")
       body["category"] = value.value;
     else if (key === "department_id")
@@ -81,16 +80,29 @@ function formUpdateBody(ticketIds, updatedObject, map, dropdownMap) {
     else if (key === "tags")
       body["tags"] = value.value.split(",");
     else {
-      body.custom_fields[key] = (map[key] === "custom_number") ? parseInt(value.value) :
-        formCustomMultiSelectBody(map, key, dropdownMap, value);
+      if (key !== "priority" && key !== "responder_id" && map[key] !== "custom_date") {
+        if (map[key] === "custom_number" || map[key] === "custom_decimal") {
+          body.custom_fields[key] = (value.value) ? parseInt(value.value) : null;
+        } else {
+          body.custom_fields[key] = formCustomMultiSelectBody(map, key, dropdownMap, value);
+        }
+      }
+
     }
   });
-  if (ticketIds.length > 0) {
-    var count = 0;
-    iterate(count, ticketIds, body, "parent");
-  } else {
-    iterate(count, ticketIds, body, "child");
+  console.log(body);
+  if (Object.keys(body).length >= 1) {
+    if (Object.keys(body.custom_fields).length || Object.keys(body).length > 1) {
+      if (ticketIds.length > 0) {
+        var count = 0;
+        iterate(count, ticketIds, body, "parent", priority);
+      } else {
+        iterate(count, ticketIds, body, "child", priority);
+      }
+    }
+
   }
+
 }
 function formCustomMultiSelectBody(map, key, dropdownMap, value) {
   var arr = [];
@@ -110,19 +122,28 @@ function formCustomMultiSelectBody(map, key, dropdownMap, value) {
 function process(count, arr, body, origin) {
   var headers = { "Authorization": "Basic <%= encode(iparam.apikey) %>", "Content-Type": "application/json" };
   var options = { headers: headers, body: JSON.stringify(body) };
-  var url = (origin === 'child ') ? `https://<%= iparam.domain %>/api/v2/tickets/${arr[count]}` :
-    `https://<%= iparam.domain %>/api/v2/tickets/${arr}`;
+  var url = (origin === 'child') ? `https://<%= iparam.domain %>/api/v2/tickets/${arr}` :
+    `https://<%= iparam.domain %>/api/v2/tickets/${arr[count]}`;
   client.request.put(url, options).then(function () {
-    (origin === 'child ') ? console.log(`Updated successfully ticket id- ${arr} `) :
-      console.log(`Updated successfully ticket id- ${arr[count]} `);
-    if (origin !== "child")
+    if (origin !== 'child') {
       iterate(count + 1, arr, body, origin);
+      console.log(`Updated successfully ticket id- ${arr[count]} `);
+    }
+    if (count + 1 === arr.length || origin === 'child') {
+      showNotification("success", "Ticket(s) updated successfully");
+    }
   }, function (error) {
     console.log("in update block");
-    console.error(error);
+    try {
+      var errResp = JSON.stringify(error.response);
+      showNotification("error", errResp.errors);
+
+    } catch (error) {
+      showNotification("error", error);
+    }
   });
 }
-function mapTicketFieldsTypes(display_id, event_data) {
+function mapTicketFieldsTypes(display_id, event_data, priority) {
   var headers = { "Authorization": "Basic <%= encode(iparam.apikey) %>" }, options = { headers: headers },
     url = `https://<%= iparam.domain %>/api/v2/ticket_form_fields`, map = new Map(), dropdownMap = {};
   client.request.get(url, options).then(function (data) {
@@ -137,14 +158,20 @@ function mapTicketFieldsTypes(display_id, event_data) {
           });
         }
       });
-      viewRelatedTickets(display_id, event_data, map, dropdownMap);
+      viewRelatedTickets(display_id, event_data, map, dropdownMap, priority);
     } catch (er) {
-      console.log("in ticket fieldscatch block");
-      console.error(er)
+      console.log("in ticket fields catch block");
+      showNotification("error", er);
     }
   }, function (error) {
     console.log("in ticket fields block");
-    console.error(error);
+    try {
+      var errResp = JSON.stringify(error.response);
+      showNotification("error", errResp.message);
+
+    } catch (error) {
+      showNotification("error", error);
+    }
   });
 }
 function iterate(count, ticketIds, body, origin) {
@@ -153,15 +180,26 @@ function iterate(count, ticketIds, body, origin) {
   } else {
     if (count < ticketIds.length) {
       process(count, ticketIds, body, origin);
-    } else {
-      console.log("ticket(s) updated successfully")
     }
   }
 
 }
 function ticketErrorBlock(error) {
-  console.error(error)
+  try {
+    var errResp = JSON.stringify(error.response);
+    showNotification("error", errResp.message);
+
+  } catch (error) {
+    showNotification("error", error);
+  }
 }
 function handleErr(err = 'None') {
-  console.error(`Error occured. Details:`, err);
+  showNotification("error", err);
+}
+function showNotification(type, message) {
+  console.log(message)
+  client.interface.trigger("showNotify", {
+    type: type,
+    message: message
+  });
 }
