@@ -23,7 +23,6 @@ function renderTicketPage() {
         $.each(event_data, function (k, v) {
           updatesFields.push(k);
         });
-        console.log(updatesFields)
         mapTicketFieldsTypes(payload.ticket.display_id, updatesFields, payload.ticket.priority);
       };
     }
@@ -65,10 +64,28 @@ function viewRelatedTickets(display_id, updatesFields, map, dropdownMap, priorit
   function ticketSuccessBlock(data) {
     try {
       var resp = JSON.parse(data.response);
-      console.log(resp)
+      console.log(resp.ticket)
+      console.log(updatesFields)
+      $.each(updatesFields, function (k, v) {
+        if (resp.ticket.hasOwnProperty(v)) {
+          console.log("IIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII")
+        }
+        else if (!resp.ticket.hasOwnProperty(v)) {
+          console.log(v)
+        }
+      });
     } catch (error) {
       console.error(error);
     }
+  }
+}
+function ticketErrorBlock(error) {
+  try {
+    var errResp = JSON.stringify(error.response);
+    showNotification("error", errResp.message);
+
+  } catch (error) {
+    showNotification("error", error);
   }
 }
 function parseErrorBlock(error) {
@@ -81,7 +98,13 @@ function parseErrorBlock(error) {
     showNotification("error", error);
   }
 }
-function getTicketDetails() {
 
+
+function showNotification(type, message) {
+  console.log(message)
+  client.interface.trigger("showNotify", {
+    type: type,
+    message: message
+  });
 }
 
