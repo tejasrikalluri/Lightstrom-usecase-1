@@ -20,7 +20,7 @@ function renderTicketPage() {
         var event_data = event.helper.getData();
         console.log(event_data)
         var updatesFields = [];
-        $.each(event_data, function (k, v) {
+        $.each(event_data, function (k) {
           updatesFields.push(k);
         });
         mapTicketFieldsTypes(payload.ticket.display_id, updatesFields, payload.ticket.priority, event_data);
